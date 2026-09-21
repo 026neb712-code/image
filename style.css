@@ -1,0 +1,32 @@
+/* Base styles shared by all container boxes */
+.box {
+    width: 100%;
+    max-width: 500px;
+    height: 250px; /* Setting a fixed height so the backgrounds are clearly visible */
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 3px solid #333;
+    font-family: Arial, sans-serif;
+    color: white; /* White text ensures contrast against images and dark gradients */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8); /* Adds a subtle drop shadow to make text highly readable */
+}
+
+/* none (Default): No image layer is applied */
+.bg-none {
+    background-image: none;
+    background-color: #666; /* Falls back to a flat gray color */
+}
+
+/* url(): Loads an external picture file path */
+.bg-image {
+    background-image: url('img.jpg'); /* Looks for a file named img.jpg in the same directory */
+    background-size: cover;          /* Scales the image to fill the entire container box */
+    background-position: center;      /* Centers the image perfectly horizontally and vertically */
+}
+
+/* linear-gradient(): Blends colors smoothly from top to bottom */
+.bg-gradient {
+    background-image: linear-gradient(red, yellow);
+    color: black; /* Swapping text to black so it stands out clearly against yellow */
+    text-shadow: none;
+}
